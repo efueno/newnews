@@ -1,0 +1,41 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="assets/login.svg" id="icon" alt="User Icon" />
+    </div>
+
+      <form #forgotForm="ngForm"
+      (ngSubmit)="forgotForm.form.valid && sendRecoverMail(forgotForm)" #form="ngForm">
+        
+        <input type="email" id="email" class="fadeIn second" name="email"
+        #sendEmail="ngModel"  ngModel placeholder="enter your email" required email>
+        <input [disabled]="!form.form.valid" 
+        type="submit" class="fadeIn fourth" value="Send Reset Code">
+      </form>
+  
+    
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+    
+      <div class="col">
+        <div *ngIf="sendEmail.invalid && (sendEmail.dirty || sendEmail.touched)"
+           class="alert alert-danger">
+           <div *ngIf="sendEmail.errors.required">
+               Email is required.
+           </div>
+           <div *ngIf="sendEmail.errors.email">
+            Email is not valid
+          </div>  
+        </div>
+
+        
+      <a [routerLink]="['/login']" class="underlineHover"  style="cursor: pointer;" >Go to Log In!</a>
+    
+      </div>
+    </div>
+  </div>
+</div>

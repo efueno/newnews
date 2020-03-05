@@ -1,0 +1,344 @@
+
+<body>
+	<!-- HEADER -->
+		<!-- PAGE HEADER -->
+		<div id="post-header" class="page-header">
+			<div class="page-header-bg" [ngStyle]="{'background-image': 'url('+article.urlToImage+')'}" data-stellar-background-ratio="0.5"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">
+						<div class="post-category">
+							<a href=""></a>
+						</div>
+						<h1>{{article.title}}</h1>
+						<ul class="post-meta">
+							<li><a>{{article.author}}</a></li>
+							<li>{{article.publishedAt | date: 'dd MMM yyyy'}}</li>
+							<li><i class="fa fa-comments"></i> </li>
+							<li><i class="fa fa-eye"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /PAGE HEADER -->
+	
+	<!-- /HEADER -->
+
+	<!-- section -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8">
+					<!-- post share -->
+					<div class="section-row">
+						<div class="post-share">
+							<a href="#" class="social-facebook"><i class="fa fa-facebook"></i><span>Share</span></a>
+							<a href="#" class="social-twitter"><i class="fa fa-twitter"></i><span>Tweet</span></a>
+							<a href="#" class="social-pinterest"><i class="fa fa-pinterest"></i><span>Pin</span></a>
+							<a href="#" ><i class="fa fa-envelope"></i><span>Email</span></a>
+						</div>
+					</div>
+					<!-- /post share -->
+
+					<!-- post content -->
+					<div class="section-row">
+						<h3>{{article.description}}</h3>
+						<p>{{article.content}}</p>
+						<p>{{article.description}}</p>
+						<figure class="pull-right">
+							<img src="{{article.urlToImage}}" >
+							<figcaption>{{article.title}}</figcaption>
+						</figure>
+						<p>{{article.content}}</p>
+						<p>{{article.content}}</p>
+						<blockquote class="blockquote">
+							<p>You Can Get Full Access To Contents Now!</p>
+							<footer class="blockquote-footer"><a href="">See Our Offers</a></footer>
+						</blockquote>
+						<p>{{article.content}}</p>
+						<figure>
+							<img src="{{article.urlToImage}}" >
+						</figure>
+						<h3>{{article.title}}</h3>
+						<p>{{article.description}}</p>
+						<p>{{article.content}}</p>
+					</div>
+					<!-- /post content -->
+
+					<!-- /related post -->
+					<div>
+						<div class="section-title">
+							<h3 class="title">Related Posts</h3>
+						</div>
+						<div class="row">
+							<!-- post -->
+							<div class="col-md-4">
+								<div [routerLink]="['/news', newsList.articles[1].publishedAt]" class="post post-sm">
+									<a class="post-img"><img src="{{newsList.articles[1].urlToImage}}" alt=""></a>
+									<div class="post-body">
+										<div class="post-category">
+											<a></a>
+										</div>
+										<h3 class="post-title title-sm"><a >{{newsList.articles[1].title}}</a></h3>
+										<ul class="post-meta">
+											<li><a>{{newsList.articles[1].author}}</a></li>
+											<li>{{newsList.articles[1].publishedAt | date: 'dd MMM yyyy' }}</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /post -->
+
+							<!-- post -->
+							<div class="col-md-4">
+								<div [routerLink]="['/news', newsList.articles[5].publishedAt]" class="post post-sm">
+									<a class="post-img"><img src="{{newsList.articles[5].urlToImage}}" alt=""></a>
+									<div class="post-body">
+										<div class="post-category">
+											<a></a>
+										</div>
+										<h3 class="post-title title-sm"><a >{{newsList.articles[5].title}}</a></h3>
+										<ul class="post-meta">
+											<li><a>{{newsList.articles[5].author}}</a></li>
+											<li>{{newsList.articles[5].publishedAt | date: 'dd MMM yyyy' }}</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /post -->
+
+							<!-- post -->
+							<div class="col-md-4">
+								<div [routerLink]="['/news', newsList.articles[7].publishedAt]" class="post post-sm">
+									<a class="post-img"><img src="{{newsList.articles[7].urlToImage}}" alt=""></a>
+									<div class="post-body">
+										<div class="post-category">
+											<a></a>
+										</div>
+										<h3 class="post-title title-sm"><a >{{newsList.articles[7].title}}</a></h3>
+										<ul class="post-meta">
+											<li><a>{{newsList.articles[7].author}}</a></li>
+											<li>{{newsList.articles[7].publishedAt | date: 'dd MMM yyyy' }}</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /post -->
+						</div>
+					</div>
+					<!-- /related post -->
+
+					<!-- post comments -->
+					<div class="section-row">
+						<div class="section-title">
+							<h3 class="title">3 Comments</h3>
+						</div>
+						<div class="post-comments">
+							<!-- comment -->
+							<div class="media">
+								<div class="media-left">
+									<img class="media-object" src="./img/avatar-2.jpg" alt="">
+								</div>
+								<div class="media-body">
+									<div class="media-heading">
+										<h4>John Doe</h4>
+										<span class="time">5 min ago</span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<a href="#" class="reply">Reply</a>
+									<!-- comment -->
+									<div class="media media-author">
+										<div class="media-left">
+											<img class="media-object" src="./img/avatar-1.jpg" alt="">
+										</div>
+										<div class="media-body">
+											<div class="media-heading">
+												<h4>John Doe</h4>
+												<span class="time">5 min ago</span>
+											</div>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+											<a href="#" class="reply">Reply</a>
+										</div>
+									</div>
+									<!-- /comment -->
+								</div>
+							</div>
+							<!-- /comment -->
+
+							<!-- comment -->
+							<div class="media">
+								<div class="media-left">
+									<img class="media-object" src="./img/avatar-3.jpg" alt="">
+								</div>
+								<div class="media-body">
+									<div class="media-heading">
+										<h4>John Doe</h4>
+										<span class="time">5 min ago</span>
+									</div>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+									<a href="#" class="reply">Reply</a>
+								</div>
+							</div>
+							<!-- /comment -->
+						</div>
+					</div>
+					<!-- /post comments -->
+
+          <!-- post reply -->
+          <div *ngIf="!authService.isLoggedIn">
+            <button style="margin-bottom: 30px;" class="primary-button">Login for reply</button>
+          </div>
+					<div *ngIf="authService.isLoggedIn" class="section-row">
+						<div class="section-title">
+							<h3 class="title">Leave a reply</h3>
+						</div>
+						<form class="post-reply">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<textarea class="input" name="message" placeholder="Message"></textarea>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<input class="input" type="text" name="name" placeholder="Name">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<input class="input" type="email" name="email" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<input class="input" type="text" name="website" placeholder="Website">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<button class="primary-button">Submit</button>
+								</div>
+
+							</div>
+						</form>
+					</div>
+					<!-- /post reply -->
+				</div>
+				<div class="col-md-4">
+					<!-- ad widget -->
+					<div class="aside-widget text-center">
+						<a href="#" style="display: inline-block;margin: auto;">
+							<img class="img-responsive" src="./img/ad-3.jpg" alt="">
+						</a>
+					</div>
+					<!-- /ad widget -->
+
+					<!-- social widget -->
+          <div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Login with</h2>
+						</div>
+						<div class="social-widget" style="cursor: pointer;">
+							<ul>
+								<li>
+									<a (click)="authService.FacebookAuth()" class="social-facebook">
+										<i class="fa fa-facebook"></i>
+										<span>facebook</span>
+									</a>
+								</li>
+								<li>
+									<a (click)="authService.TwitterAuth()" class="social-twitter">
+										<i class="fa fa-twitter"></i>
+										<span>twitter</span>
+									</a>
+								</li>
+								<li>
+									<a (click)="authService.GoogleAuth()"  class="social-google-plus">
+										<i class="fa fa-google-plus"></i>
+										<span>google</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /social widget -->
+
+					<!-- category widget -->
+					
+
+					<!-- newsletter widget -->
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Newsletter</h2>
+						</div>
+						<div class="newsletter-widget">
+							<form #form1="ngForm" (submit)="form1.form.valid && subscribe(form1)">
+								<p></p>
+								<input class="input" type="email" name="newsletter" placeholder="Enter Your Email" ngModel required email>
+								<button class="primary-button">Subscribe</button>
+							</form>
+						</div>
+          </div>
+          
+					<!-- post widget -->
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Popular Posts</h2>
+						</div>
+						<!-- post -->
+						<div [routerLink]="['/news', newsList.articles[6].publishedAt]" class="post post-widget">
+							<a class="post-img"><img src="{{newsList.articles[6].urlToImage}}" ></a>
+							<div class="post-body">
+								<div class="post-category">
+									
+								</div>
+								<h3 class="post-title"><a>{{newsList.articles[6].title}}</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+						<!-- post -->
+						<div [routerLink]="['/news', newsList.articles[9].publishedAt]" class="post post-widget">
+							<a class="post-img"><img src="{{newsList.articles[9].urlToImage}}" ></a>
+							<div class="post-body">
+								<div class="post-category">
+									
+								</div>
+								<h3 class="post-title"><a>{{newsList.articles[9].title}}</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+						<!-- post -->
+						<div [routerLink]="['/news', newsList.articles[8].publishedAt]" class="post post-widget">
+							<a class="post-img"><img src="{{newsList.articles[8].urlToImage}}" ></a>
+							<div class="post-body">
+								<div class="post-category">
+									
+								</div>
+								<h3 class="post-title"><a>{{newsList.articles[8].title}}</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+						<!-- post -->
+						
+						<!-- /post -->
+					</div>
+					<!-- /post widget -->
+
+				
+
+				
+				
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+
+</body>
+

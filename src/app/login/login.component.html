@@ -1,0 +1,52 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="assets/login.svg" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+
+
+    <form #loginForm="ngForm" (ngSubmit)="loginForm.form.valid && login(loginForm)" #form="ngForm">
+
+      <input type="email" id="email" class="fadeIn first" name="email" placeholder="email" ngModel required email
+        #email="ngModel">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" ngModel required
+        #password="ngModel">
+      <input [disabled]="!form.form.valid" type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+
+
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+
+      <div class="col">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+          <div *ngIf="email.errors.required">
+            Email is required.
+          </div>
+          <div *ngIf="email.errors.email">
+            Email is not valid
+          </div>
+        </div>
+
+        <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+
+          <div *ngIf="password.errors.required">
+            enter a password
+          </div>
+        </div>
+        <ul type="none">
+          <li> <a [routerLink]="['/forgot']" class="underlineHover" style="cursor: pointer;"
+              (click)="loginForgotChanger()">Forgot Password?</a></li>
+          <li> <a [routerLink]="['/register']" class="underlineHover" style="cursor: pointer;">Sign Up Now</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

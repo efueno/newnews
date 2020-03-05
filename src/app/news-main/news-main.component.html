@@ -1,0 +1,361 @@
+
+
+<body>
+	<!-- HEADER -->
+	
+	<!-- /HEADER -->
+	<!-- SECTION ILK 3LU -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row  -->
+			<div id="hot-post" class="row hot-post">
+				<div class="col-md-8 hot-post-left"  >
+					<!-- post -->
+					<div [routerLink]="['/news', newsList.articles[0].publishedAt]"class="post post-thumb" style="cursor: pointer ;">
+						<a class="post-img"   ><img src="{{newsList.articles[0].urlToImage}}" alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title title-lg"><a >{{newsList.articles[0].title}}</a></h3>
+							<ul class="post-meta">
+								<li><a>{{newsList.articles[0].author}}</a></li>
+								<li>{{newsList.articles[0].publishedAt | date: 'dd MMM yyyy'}}</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /post -->
+				</div>
+				<div class="col-md-4 hot-post-right" style="height: 100%; display: flex; flex-direction: column;">
+					<!-- post -->
+					
+					<div [routerLink]="['/news', newsList.articles[1].publishedAt]"class="post post-thumb" style="cursor: pointer; position: relative;">
+						<a class="post-img"   ><img src={{newsList.articles[1].urlToImage}} alt=""></a>
+						<div class="post-body" >
+							
+							<h3  class="post-title"><a>{{newsList.articles[1].title}}</a></h3>
+							<ul class="post-meta">
+								<li><a>{{newsList.articles[1].author}}</a></li>
+								<li>{{newsList.articles[1].publishedAt | date: 'dd MMM yyyy'}}</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /post -->
+
+					<!-- post -->
+					<div [routerLink]="['/news', newsList.articles[2].publishedAt]"class="post post-thumb" style="cursor: pointer; position: relative;">
+						<a class="post-img" ><img src={{newsList.articles[2].urlToImage}} alt=""></a>
+						<div class="post-body" >
+
+							<h3 class="post-title"><a>{{newsList.articles[2].title}}</a></h3>
+							<ul class="post-meta">
+								<li><a>{{newsList.articles[2].author}}</a></li>
+								<li>{{newsList.articles[2].publishedAt | date: 'dd MMM yyyy'}}</li>
+							</ul>
+						</div>
+					</div> 
+					<!-- /post -->
+				</div>
+			</div>
+			<!-- /row  -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION /ILK 3LU SONU-->
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="section-title">
+								<h2 class="title">Recent posts</h2>
+							</div>
+						</div>
+						<!-- post -->
+						<div class="col-md-6">
+							<div [routerLink]="['/news', newsList.articles[3].publishedAt]" class="post" style="cursor: pointer; height: 100%;">
+								<a class="post-img" style="height: 60%;" ><img src="{{newsList.articles[3].urlToImage}}" alt=""></a>
+								<div class="post-body" style="height: 40%;">
+									<h3 class="post-title"><a>{{newsList.articles[3].title}}</a></h3>
+									<ul class="post-meta">
+										<li><a>{{newsList.articles[3].author}}</a></li>
+										<li>{{newsList.articles[3].publishedAt | date: 'dd MMM yyyy'}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /post -->
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div [routerLink]="['/news', newsList.articles[4].publishedAt]" class="post" style="cursor: pointer; height: 100%;">
+								<a class="post-img" style="height: 60%;" ><img src="{{newsList.articles[4].urlToImage}}" alt=""></a>
+								<div class="post-body" style="height: 40%;">
+									<h3 class="post-title"><a>{{newsList.articles[4].title}}</a></h3>
+									<ul class="post-meta">
+										<li><a>{{newsList.articles[4].author}}</a></li>
+										<li>{{newsList.articles[4].publishedAt | date: 'dd MMM yyyy'}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /post -->
+
+					
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div [routerLink]="['/news', newsList.articles[5].publishedAt]" class="post" style="cursor: pointer; height: 100%;">
+								<a  class="post-img"  style="height: 60%;"><img src="{{newsList.articles[5].urlToImage}}" alt=""></a>
+								<div class="post-body" style="height: 40%;">
+									<h3 class="post-title"><a>{{newsList.articles[5].title}}</a></h3>
+									<ul class="post-meta">
+										<li><a>{{newsList.articles[5].author}}</a></li>
+										<li>{{newsList.articles[5].publishedAt | date: 'dd MMM yyyy'}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /post -->
+
+						<!-- post -->
+						<div class="col-md-6">
+							<div [routerLink]="['/news', newsList.articles[6].publishedAt]" class="post" style="cursor: pointer; height: 100%;">
+								<a  class="post-img" style="height: 60%;"><img src="{{newsList.articles[6].urlToImage}}" alt=""></a>
+								<div class="post-body" style="height: 40%;">
+									<h3 class="post-title"><a>{{newsList.articles[6].title}}</a></h3>
+									<ul class="post-meta">
+										<li><a>{{newsList.articles[6].author}}</a></li>
+										<li>{{newsList.articles[6].publishedAt | date: 'dd MMM yyyy'}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<!-- /post -->
+					</div>
+					<!-- /row -->
+
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="section-title">
+								<h2 class="title"></h2>
+							</div>
+						</div>
+						<!-- post -->
+						<div class="col-md-4">
+							<div [routerLink]="['/news', newsList.articles[7].publishedAt]" class="post post-sm" style="cursor: pointer; height: 100%;">
+								<a class="post-img"style="height: 60%;" ><img style="height: 100%;" src="{{newsList.articles[7].urlToImage}}" alt=""></a>
+								<div class="post-body"style="height: 40%;">
+									<h3 class="post-title title-sm"><a >{{newsList.articles[7].title}}</a></h3>
+									<ul class="post-meta">
+										<li><a>{{newsList.articles[7].author}}</a></li>
+										<li>{{newsList.articles[7].publishedAt | date: 'dd MMM yyyy'}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div [routerLink]="['/news', newsList.articles[8].publishedAt]" class="post post-sm" style="cursor: pointer; height: 100%;">
+								<a class="post-img"style="height: 60%;" ><img style="height: 100%;" src="{{newsList.articles[8].urlToImage}}" alt=""></a>
+								<div class="post-body"style="height: 40%;">
+									<h3 class="post-title title-sm"><a style="-webkit-line-clamp: 3;">{{newsList.articles[8].title}}</a></h3>
+									<ul class="post-meta">
+										<li><a>{{newsList.articles[8].author}}</a></li>
+										<li>{{newsList.articles[8].publishedAt | date: 'dd MMM yyyy'}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div [routerLink]="['/news', newsList.articles[9].publishedAt]" class="post post-sm" style="cursor: pointer; height: 100%;">
+								<a class="post-img" style="height: 60%;" ><img style="height: 100%;" src="{{newsList.articles[9].urlToImage}}" alt=""></a>
+								<div class="post-body"style="height: 40%;">
+									<h3 class="post-title title-sm"><a style="-webkit-line-clamp: 3;">{{newsList.articles[9].title}}</a></h3>
+									<ul class="post-meta">
+										<li style="overflow: hidden;"><a>{{newsList.articles[9].author}}</a></li>
+										<li>{{newsList.articles[9].publishedAt | date: 'dd MMM yyyy'}}</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="col-md-4">
+				
+					<!-- social widget -->
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Login with</h2>
+						</div>
+						<div class="social-widget" style="cursor: pointer;">
+							<ul>
+								<li>
+									<a (click)="authService.FacebookAuth()" class="social-facebook">
+										<i class="fa fa-facebook"></i>
+										<span>facebook</span>
+									</a>
+								</li>
+								<li>
+									<a (click)="authService.TwitterAuth()" class="social-twitter">
+										<i class="fa fa-twitter"></i>
+										<span>twitter</span>
+									</a>
+								</li>
+								<li>
+									<a (click)="authService.GoogleAuth()"  class="social-google-plus">
+										<i class="fa fa-google-plus"></i>
+										<span>google</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- /social widget -->
+
+					<!-- category widget -->
+					
+
+					<!-- newsletter widget -->
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Newsletter</h2>
+						</div>
+						<div class="newsletter-widget">
+							<form #form="ngForm" (submit)="form.form.valid && subscribe(form)">
+								<p></p>
+								<input class="input" type="email" name="newsletter" placeholder="Enter Your Email" ngModel required email>
+								<button class="primary-button">Subscribe</button>
+							</form>
+						</div>
+					</div>
+					<!-- /newsletter widget -->
+
+					<!-- post widget -->
+					<br>
+					<div class="aside-widget">
+						<div class="section-title">
+							<h2 class="title">Popular Posts</h2>
+						</div>
+						<!-- post -->
+						<div [routerLink]="['/news', newsList.articles[13].publishedAt]" class="post post-widget" style="cursor: pointer;">
+							<a class="post-img"  ><img src="{{newsList.articles[13].urlToImage}}" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a  >{{newsList.articles[13].title}}</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+						<!-- post -->
+						<div [routerLink]="['/news', newsList.articles[27].publishedAt]" class="post post-widget" style="cursor: pointer;">
+							<a class="post-img"  ><img src="{{newsList.articles[27].urlToImage}}" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a  >{{newsList.articles[27].title}}</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+						<!-- post -->
+						<div [routerLink]="['/news', newsList.articles[17].publishedAt]" class="post post-widget" style="cursor: pointer;">
+							<a class="post-img"  ><img src="{{newsList.articles[17].urlToImage}}" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a  >{{newsList.articles[17].title}}</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+
+						<!-- post -->
+						<div [routerLink]="['/news', newsList.articles[25].publishedAt]" class="post post-widget" style="cursor: pointer;">
+							<a  class="post-img"  ><img src="{{newsList.articles[25].urlToImage}}" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a  >{{newsList.articles[25].title}}</a></h3>
+							</div>
+						</div>
+						<div [routerLink]="['/news', newsList.articles[15].publishedAt]"class="post post-widget" style="cursor: pointer;">
+							<a  class="post-img"  ><img src="{{newsList.articles[15].urlToImage}}" alt=""></a>
+							<div class="post-body">
+								<h3 class="post-title"><a  >{{newsList.articles[15].title}}</a></h3>
+							</div>
+						</div>
+						<!-- /post -->
+					</div>
+					<!-- /post widget -->
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+	<!-- SECTION -->
+
+	<!-- /SECTION -->
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+		
+			<!-- /row -->
+
+			<!-- row -->
+			<div class="row">
+				<div *ngFor="let article of newsList.articles | slice:10; let i = index;"
+				class="col-md-4">
+					<!-- post -->
+					<div [routerLink]="['/news', article.publishedAt ]"class="post post-widget" style="cursor: pointer; height: 85%">
+						<a  class="post-img" style="height: 100%;"  ><img style="height: 100%;" src="{{article.urlToImage}}" alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title"><a>{{article.title}}</a></h3>
+						</div>
+					</div>
+					<!-- /post -->
+
+					<!-- /post -->
+				</div>
+			
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-md-8">
+				
+				</div>
+				
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+	<!-- FOOTER -->
+
+	<!-- /FOOTER -->
+
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.stellar.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+
+

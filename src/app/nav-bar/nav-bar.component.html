@@ -1,0 +1,75 @@
+<header  >
+  <div (clickOutside)="clickedOutside($event)" >
+
+  <div  [ngClass]="toggle ? 'bg-dark collapse show' :'bg-dark collapse'" id="navbarHeader" name="navbarHeader" #navbarHeader>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">Do You Want To Join Us?</h4>
+          <p class="text-muted">We have good offers for everyone. You can choose what you want to see.  </p>
+          <p class="text-muted">Just click here and join us! </p>
+         <div class="row" style="margin-left: 2px;">
+          <button [routerLink]="['contact']" (click)="toggle=!toggle" class="btn btn-outline-success my-2 my-sm-0" style="background-color: orange;" type="submit">Contact</button>
+          <button *ngIf="!authService.isLoggedIn" [routerLink]="['register']" (click)="toggle=!toggle" class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+          <button *ngIf="authService.isLoggedIn" [routerLink]="['dashboard']" (click)="toggle=!toggle" class="btn btn-outline-success my-2 my-sm-0" type="submit">Dashboard</button>
+
+        </div>
+        </div>
+        <div #insideElement class="col-sm-4 offset-md-1 py-4"  >
+          <h4 class="text-white">Categories</h4>
+          <ul class="list-unstyled">
+            <li><a [routerLink]="['']" (click)="toggle=!toggle"class="text-white">World</a></li>
+            <li><a [routerLink]="['']" (click)="toggle=!toggle"class="text-white">Economy</a></li>
+            <li><a [routerLink]="['']" (click)="toggle=!toggle"class="text-white">Sport</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+      <div class="menu-left">
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+          <img src="assets/logo.png" width="130" alt="">
+        <strong></strong>
+      </a>
+      
+        <div>
+          <button *ngIf="isLogged" (click)="logOut()" class="btn btn-outline-success my-2 my-sm-0" 
+          type="submit">Log out</button>
+
+          <button *ngIf="!isLogged"[routerLink]="['login']" (click)="toggle=false;"class="btn btn-outline-success my-2 my-sm-0"
+           type="submit">Login</button>
+          
+          <button [ngClass]="'toogle'? 'navbar-toggler collapsed' : 'navbar-toggler' " 
+          type="button" data-toggle="collapse" 
+          data-target="#navbarHeader" aria-controls="navbarHeader" 
+          aria-expanded="true" aria-label="Toggle navigation" name="toggleButton" #toggleButton>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      </div>
+      
+       </div>
+       
+
+       
+      </div>
+      
+      
+    </div>
+  </div>
+  
+</div>
+
+</header>
+
+
+
+
+
+
+
+
+
