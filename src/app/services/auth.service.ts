@@ -33,7 +33,7 @@ this.afAuth.authState.subscribe(user => {
       const userData= {
         uid: user.uid,
         email: user.email,
-        displayName: user.displayName,
+        displayName: user.displayName
      
       }
       return userRef.set(userData, {
@@ -62,7 +62,7 @@ SignIn(email,password){
   })
 }
 
-SignUp(email, password){
+SignUp(email, password,name){
   return this.afAuth.auth.createUserWithEmailAndPassword(email,password)
   .then((result)=>{
     console.log('result= '+result)

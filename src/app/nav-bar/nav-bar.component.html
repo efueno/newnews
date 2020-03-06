@@ -37,9 +37,12 @@
       </a>
       
         <div>
+          <button *ngIf="isLogged" class="btn btn-outline-success my-2 my-sm-0" 
+          type="submit">{{userName}}</button>
           <button *ngIf="isLogged" (click)="logOut()" class="btn btn-outline-success my-2 my-sm-0" 
           type="submit">Log out</button>
-
+          
+        
           <button *ngIf="!isLogged"[routerLink]="['login']" (click)="toggle=false;"class="btn btn-outline-success my-2 my-sm-0"
            type="submit">Login</button>
           

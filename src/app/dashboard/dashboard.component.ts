@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { SubsService } from './../services/subs.service';
 import { Component, OnInit } from '@angular/core';
 import { Subs } from '../services/subs';
@@ -10,7 +11,9 @@ import { Subs } from '../services/subs';
 })
 export class DashboardComponent implements OnInit {
  members;
-  constructor(private subsService: SubsService) { 
+ object1;
+  constructor(private subsService: SubsService,
+              private authService: AuthService) { 
                 }
 
   ngOnInit() {
@@ -18,7 +21,10 @@ export class DashboardComponent implements OnInit {
       this.subsService.getAllMembers().subscribe(data=>{
           this.members= data 
           })
+        
+        
+        
         }
-
+      
 
 }

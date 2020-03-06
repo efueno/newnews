@@ -21,9 +21,9 @@ export class RegisterComponent implements OnInit {
   register(registerForm){
     let email= (registerForm.value).email
     let password=(registerForm.value).password
-    let displayName= (registerForm.value).displayName
+    let name= (registerForm.value).name
     
-    this.auth.SignUp(email,password)
+    this.auth.SignUp(email,password,name)
     
     
   }

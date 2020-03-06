@@ -16,6 +16,8 @@ export class NavBarComponent implements OnInit {
   
   toggle:Boolean=false;
   loggedIn=false;
+  userName:String;
+  
 
   
   constructor(public authService: AuthService
@@ -23,6 +25,8 @@ export class NavBarComponent implements OnInit {
 
   ngOnInit() {
     this.loggedIn=this.authService.isLoggedIn
+    
+    console.log(this.userName)
   }
   logOut(){
     this.authService.SignOut()
@@ -34,8 +38,9 @@ export class NavBarComponent implements OnInit {
   //disarisi tiklandiginda KOD ILE BUTTON TIKLAMA
   clickedOutside(e: Event){
     let el: HTMLElement = this.toggleButton.nativeElement;
+    if(el.className =='navbar-toggler'){
     el.click();
-    
+    }
   }
 
 
