@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 #sensitive1
-/src/app/environments 
+/src/environments 
